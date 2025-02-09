@@ -1,0 +1,12 @@
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: ./docker_files/Ruby.Dockerfile
+    volumes:
+      - .:/src
+      - app_bundle:/usr/local/bundle
+
+volumes:
+  app_bundle:
+    external: false
